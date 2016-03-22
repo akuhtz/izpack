@@ -32,7 +32,7 @@ import com.izforge.izpack.api.data.binding.OsModel;
 /**
  * A {@link PackFile} that includes the file position in the installation media.
  *
- * @author Dennis Reil, <Dennis.Reil@reddot.de>
+ * @author Dennis Reil, &lt;Dennis.Reil@reddot.de&gt;
  */
 public class XPackFile extends PackFile implements Comparable<XPackFile>
 {
@@ -51,6 +51,8 @@ public class XPackFile extends PackFile implements Comparable<XPackFile>
      * @param target   the path to install the file to
      * @param osList   OS constraints
      * @param override what to do when the file already exists
+     * @param overrideRenameTo override name
+     * @param blockable the blockable
      * @throws FileNotFoundException if the specified file does not exist.
      */
     public XPackFile(File baseDir, File src, String target, List<OsModel> osList, OverrideType override,
@@ -65,7 +67,7 @@ public class XPackFile extends PackFile implements Comparable<XPackFile>
      * Constructs an <tt>XPackFile</tt> from an {@link PackFile}.
      *
      * @param file the pack file
-     * @throws FileNotFoundException
+     * @throws FileNotFoundException if the specified file does not exist.
      */
     public XPackFile(PackFile file) throws FileNotFoundException
     {

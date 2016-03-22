@@ -23,7 +23,7 @@ package com.izforge.izpack.api.handler;
 
 /**
  * This interface describes basic functionality neccessary for user interaction.
- * <p/>
+ * <p>
  * All methods or functions which perform work and need to notify or ask the user use a listener for
  * such purposes. This way, we can separate UI from function.
  */
@@ -33,7 +33,7 @@ public interface AbstractUIHandler
 
     /**
      * Notify the user about something.
-     * <p/>
+     * <p>
      * The difference between notification and warning is that a notification should not need user
      * interaction and can safely be ignored.
      *

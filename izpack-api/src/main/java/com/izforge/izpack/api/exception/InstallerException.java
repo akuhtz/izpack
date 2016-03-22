@@ -30,7 +30,7 @@ public class InstallerException extends IzPackException
 {
 
     /**
-     * @param message
+     * @param message the message
      */
     public InstallerException(String message)
     {
@@ -38,7 +38,7 @@ public class InstallerException extends IzPackException
     }
 
     /**
-     * @param cause
+     * @param cause the cause
      */
     public InstallerException(Throwable cause)
     {
@@ -46,8 +46,8 @@ public class InstallerException extends IzPackException
     }
 
     /**
-     * @param message
-     * @param cause
+     * @param message the message
+     * @param cause the cause
      */
     public InstallerException(String message, Throwable cause)
     {

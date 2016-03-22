@@ -66,7 +66,7 @@ public class FileUtil
      * @param fileName A file to read from.
      * @return List of individual line of the specified file. List may be empty but not
      *         null.
-     * @throws IOException
+     * @throws IOException If an I/O error occurs
      */
     public static List<String> getFileContent(String fileName)
             throws IOException
@@ -255,7 +255,7 @@ public class FileUtil
      * Gets a relative file from a filename against a base directory.
      * Enclosed '.' and '..' characters are resolved for all parameters.
      *
-     * @param filename The filename to build a relative file from
+     * @param file The file to build a relative file from
      * @param basedir  The base directory for a relative filename
      * @return The relative file name, or null, if one input parameter was null
      * @throws IOException if the file paths cannot be canonicalized

@@ -29,7 +29,7 @@ import com.izforge.izpack.api.handler.AbstractUIProgressHandler;
 
 /**
  * Abstract implementation of {@link InstallerListener}.
- * <p/>
+ * <p>
  * This provides no-op versions of each of the methods, to simplify implementation of listeners that only need
  * some methods.
  *

@@ -31,7 +31,7 @@ import com.izforge.izpack.api.data.InstallData;
  * Abstract base class for all conditions. Implementations of custom conditions
  * have to derive from this class.
  *
- * @author Dennis Reil <izpack@reil-online.de>
+ * @author Dennis Reil &lt;izpack@reil-online.de&gt;
  */
 public abstract class Condition implements Serializable
 {

@@ -26,7 +26,7 @@ import java.util.*;
 
 /**
  * @author Jan Blok
- * @author Dennis Reil, <Dennis.Reil@reddot.de>
+ * @author Dennis Reil, &lt;Dennis.Reil@reddot.de&gt;
  */
 public class Panel extends DefaultConfigurationHandler implements Serializable
 {

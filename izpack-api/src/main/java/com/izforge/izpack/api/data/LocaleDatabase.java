@@ -39,7 +39,7 @@ import com.izforge.izpack.api.resource.Messages;
  * Represents a database of a locale.
  *
  * @author Julien Ponge
- * @author J. Chris Folsom <jchrisfolsom@gmail.com>
+ * @author J. Chris Folsom &lt;jchrisfolsom@gmail.com&gt;
  */
 public class LocaleDatabase extends TreeMap<String, String> implements Messages
 {
@@ -162,7 +162,7 @@ public class LocaleDatabase extends TreeMap<String, String> implements Messages
 
     /**
      * Formats the message with the specified identifier, replacing placeholders with the supplied arguments.
-     * <p/>
+     * <p>
      * This uses {@link java.text.MessageFormat} to format the message.
      *
      * @param id   the message identifier
@@ -215,7 +215,7 @@ public class LocaleDatabase extends TreeMap<String, String> implements Messages
 
     /**
      * Adds messages.
-     * <p/>
+     * <p>
      * This merges the supplied messages with the current messages. If an existing message exists with the same
      * identifier as that supplied, it will be replaced.
      *

@@ -74,7 +74,7 @@ public interface IXMLParser
      *
      * @param inputURL Url of the resource
      * @return Root element of the parsed xml
-     * @throws XMLException
+     * @throws XMLException if something went wrong.
      */
     IXMLElement parse(URL inputURL);
 }

@@ -34,10 +34,11 @@ public interface ObjectFactory
 
     /**
      * Creates a new instance of the specified type.
-     * <p/>
+     * <p>
      * Constructor arguments may be specified as parameters, or injected by the factory.
      * When specified as parameters, order is unimportant, but must be unambiguous.
      *
+     * @param <T> the instance type
      * @param type       the object type
      * @param parameters additional constructor parameters
      * @return a new instance
@@ -46,10 +47,11 @@ public interface ObjectFactory
 
     /**
      * Creates a new instance of the specified class name.
-     * <p/>
+     * <p>
      * Constructor arguments may be specified as parameters, or injected by the factory.
      * When specified as parameters, order is unimportant, but must be unambiguous.
      *
+     * @param <T> the instance type
      * @param className  the class name
      * @param superType  the super type
      * @param parameters additional constructor parameters

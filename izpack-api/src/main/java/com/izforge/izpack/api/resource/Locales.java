@@ -30,19 +30,19 @@ import com.izforge.izpack.api.exception.ResourceNotFoundException;
 
 /**
  * Supported locales.
- * <p/>
+ * <p>
  * IzPack uses 3 character ISO language and country codes to identify locale-specific resources rather than
  * the convention used by Java to identify resources bundles.
- * <p/>
+ * <p>
  * This has the following restrictions:
  * <ul>
  * <li>resources can either be associated with a particular country code or language code, but not both</li>
  * <li>country codes should be specified as lower-case</li>
  * <li>country codes are used in preference to language codes. This is to handle the case where a language
  * variation is spoken for which there is no ISO language code.
- * <p/>
+ * <p>
  * e.g Portuguese and Brazilian Portuguese.
- * <p/>
+ * <p>
  * For resources bundles, these would typically be specified as "pt" and "pt_BR". In IzPack,
  * they must be specified using "prt" and "bra" respectively.
  * </li>
@@ -70,7 +70,7 @@ public interface Locales
 
     /**
      * Returns the current locale's 3 character ISO code.
-     * <p/>
+     * <p>
      * This is the code that was used to select the locale's messages and may be a country or language code.
      *
      * @return the current locale's ISO code, or {@code null} if there is no current locale
@@ -94,7 +94,7 @@ public interface Locales
 
     /**
      * Returns the 3 character ISO codes of the supported locales.
-     * <p/>
+     * <p>
      * For backward compatibility:
      * <ol>
      * <li>these should all be lowercase; and</li>

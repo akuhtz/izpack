@@ -29,7 +29,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Contains some informations for an installer, as defined in the <info> section of the XML files.
+ * Contains some informations for an installer, as defined in the &lt;info&gt; section of the XML files.
  *
  * @author Julien Ponge
  */
@@ -469,7 +469,7 @@ public class Info implements Serializable
         /**
          * Gets a String representation of the author.
          *
-         * @return The String representation of the author, in the form : name <email> .
+         * @return The String representation of the author, in the form : name &lt;email&gt; .
          */
         public String toString()
         {
@@ -494,9 +494,9 @@ public class Info implements Serializable
         /**
          * Create a new TempDir with the specified name prefix and suffix
          *
-         * @param variableName
-         * @param prefix
-         * @param suffix
+         * @param variableName the variable name
+         * @param prefix the prefix
+         * @param suffix the suffix
          */
         public TempDir(String variableName, String prefix, String suffix)
         {

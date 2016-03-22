@@ -38,7 +38,7 @@ import java.io.Writer;
  * variable is undefined then it is not substituted but the corresponding part of the stream is
  * copied as is.
  *
- * @author Johannes Lehtinen <johannes.lehtinen@iki.fi>
+ * @author Johannes Lehtinen &lt;johannes.lehtinen@iki.fi&gt;
  */
 public interface VariableSubstitutor extends Serializable
 {
@@ -50,7 +50,8 @@ public interface VariableSubstitutor extends Serializable
 
     /**
      * Substitutes the variables found in the specified string. Escapes special characters using
-     * file type specific escaping if necessary.<br />
+     * file type specific escaping if necessary.
+     * <p>
      * The escaped type will be plain.
      *
      * @param str the string to check for variables
@@ -82,7 +83,6 @@ public interface VariableSubstitutor extends Serializable
      * @throws IllegalArgumentException     if unknown file type specified
      * @throws UnsupportedEncodingException if encoding not supported
      * @throws IOException                  if an I/O error occurs
-     * @throws
      */
     int substitute(InputStream in, OutputStream out, SubstitutionType type, String encoding)
             throws Exception;

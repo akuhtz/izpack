@@ -36,7 +36,7 @@ import java.util.Map;
  * Encloses information about a packed file. This class abstracts the way file data is stored to
  * package.
  *
- * @author Johannes Lehtinen <johannes.lehtinen@iki.fi>
+ * @author Johannes Lehtinen &lt;johannes.lehtinen@iki.fi&gt;
  */
 public class PackFile implements Serializable
 {
@@ -127,6 +127,8 @@ public class PackFile implements Serializable
      * @param target   the path to install the file to
      * @param osList   OS constraints
      * @param override what to do when the file already exists
+     * @param overrideRenameTo override name
+     * @param blockable the blockable
      * @throws FileNotFoundException if the specified file does not exist.
      */
     public PackFile(File baseDir, File src, String target, List<OsModel> osList, OverrideType override, String overrideRenameTo, Blockable blockable)
@@ -143,6 +145,8 @@ public class PackFile implements Serializable
      * @param target             the path to install the file to
      * @param osList             OS constraints
      * @param override           what to do when the file already exists
+     * @param overrideRenameTo override name
+     * @param blockable the blockable
      * @param additionals        additional attributes
      * @throws FileNotFoundException if the specified file does not exist.
      */
@@ -194,6 +198,8 @@ public class PackFile implements Serializable
      * @param target      the path to install the file to
      * @param osList      OS constraints
      * @param override    what to do when the file already exists
+     * @param overrideRenameTo override name
+     * @param blockable the blockable
      * @param additionals additional attributes
      * @throws FileNotFoundException if the specified file does not exist.
      */
@@ -211,6 +217,8 @@ public class PackFile implements Serializable
 
     /**
      * The target operating system constraints of this file
+     * 
+     * @return the list of constraints
      */
     public final List<OsModel> osConstraints()
     {
@@ -219,6 +227,8 @@ public class PackFile implements Serializable
 
     /**
      * The length of the file in bytes
+     * 
+     * @return the length
      */
     public final long length()
     {
@@ -227,6 +237,8 @@ public class PackFile implements Serializable
 
     /**
      * The size of the file in bytes (is the same as the length if it is not a loose pack)
+     * 
+     * @return the size
      */
     public final long size()
     {
@@ -235,6 +247,8 @@ public class PackFile implements Serializable
 
     /**
      * The last-modification time of the file.
+     * 
+     * @return the time
      */
     public final long lastModified()
     {
@@ -242,7 +256,9 @@ public class PackFile implements Serializable
     }
 
     /**
-     * Whether or not this file is going to override any existing ones
+     * Whether or not this file is going to override any existing ones.
+     * 
+     * @return the override type
      */
     public final OverrideType override()
     {
@@ -254,7 +270,7 @@ public class PackFile implements Serializable
      * and the file does already exist. This is similar like the Ant globmapper target expression
      * when mapping from "*".
      *
-     * @return
+     * @return resulting filename
      */
     public final String overrideRenameTo()
     {
@@ -263,6 +279,8 @@ public class PackFile implements Serializable
 
     /**
      * Whether or not this file might be blocked during installation/uninstallation
+     * 
+     * @return the blockable
      */
     public final Blockable blockable()
     {
@@ -281,6 +299,8 @@ public class PackFile implements Serializable
 
     /**
      * The full path name of the target file, using '/' as fileseparator.
+     * 
+     * @return the target path
      */
     public final String getTargetPath()
     {
@@ -290,6 +310,8 @@ public class PackFile implements Serializable
     /**
      * The Path of the file relative to the given (compiletime's) basedirectory.
      * Can be resolved while installing with either current working directory or directory of "installer.jar"
+     * 
+     * @return the relative path
      */
     public String getRelativeSourcePath()
     {

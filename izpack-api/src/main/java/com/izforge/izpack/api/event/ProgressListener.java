@@ -2,7 +2,7 @@ package com.izforge.izpack.api.event;
 
 /**
  * This interface is used to notify the user of some progress.
- * <p/>
+ * <p>
  * For example, the installation progress and compilation progress are communicated to the user
  * using this interface. The interface supports a two-stage progress indication: The whole action is
  * divided into steps (for example, packs when installing) and sub-steps (for example, files of a pack).
@@ -34,7 +34,7 @@ public interface ProgressListener
 
     /**
      * Sets the number of sub-steps.
-     * <p/>
+     * <p>
      * This may be used if the number of sub-steps changes during an action.
      *
      * @param subSteps the number of sub-steps
@@ -43,7 +43,7 @@ public interface ProgressListener
 
     /**
      * Invoked to notify progress.
-     * <p/>
+     * <p>
      * This increments the current step.
      *
      * @param message a message describing the step

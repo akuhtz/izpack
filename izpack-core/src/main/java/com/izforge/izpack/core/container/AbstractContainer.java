@@ -78,6 +78,7 @@ public abstract class AbstractContainer implements Container
     /**
      * Register a component type.
      *
+     * @param <T> the type of the component
      * @param componentType the component type
      * @throws ContainerException if registration fails
      */
@@ -119,6 +120,7 @@ public abstract class AbstractContainer implements Container
      * <p/>
      * If the component type is registered but an instance does not exist, then it will be created.
      *
+     * @param <T> the type of the component
      * @param componentType the type of the component
      * @return the corresponding object instance, or <tt>null</tt> if it does not exist
      * @throws ContainerException if component creation fails

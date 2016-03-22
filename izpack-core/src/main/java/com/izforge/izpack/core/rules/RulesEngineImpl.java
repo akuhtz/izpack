@@ -52,7 +52,7 @@ import java.util.logging.Logger;
 /**
  * The rules engine class is the central point for checking conditions
  *
- * @author Dennis Reil, <Dennis.Reil@reddot.de> created: 09.11.2006, 13:48:39
+ * @author Dennis Reil, &lt;Dennis.Reil@reddot.de&gt; created: 09.11.2006, 13:48:39
  */
 public class RulesEngineImpl implements RulesEngine
 {

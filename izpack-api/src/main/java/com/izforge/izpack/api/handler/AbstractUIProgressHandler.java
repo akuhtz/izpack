@@ -25,7 +25,7 @@ import com.izforge.izpack.api.event.ProgressListener;
 
 /**
  * This interface is used by functions which need to notify the user of some progress.
- * <p/>
+ * <p>
  * For example, the installation progress and compilation progress are communicated to the user
  * using this interface. The interface supports a two-stage progress indication: The whole action is
  * divided into steps (for example, packs when installing) and sub-steps (for example, files of a

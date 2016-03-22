@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 /**
  * This is a convienient class, which helps you to detect / identify the running OS/Distribution
- * <p/>
+ * <p>
  * Created at: Date: Nov 9, 2004 Time: 8:53:22 PM
  *
  * @author hani, Marc.Eppelmann&#064;reddot.de

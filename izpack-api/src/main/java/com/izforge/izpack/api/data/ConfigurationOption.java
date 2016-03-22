@@ -52,6 +52,7 @@ public class ConfigurationOption implements Serializable
     /**
      * Get the option's current value according to the optional condition
      *
+     * @param rules the rules
      * @return the current value
      */
     public String getValue(RulesEngine rules)

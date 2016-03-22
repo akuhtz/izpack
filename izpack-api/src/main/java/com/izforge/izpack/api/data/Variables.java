@@ -89,6 +89,7 @@ public interface Variables
      * Returns the integer value of the specified variable.
      *
      * @param name the variable name
+     * @param defaultValue the default value to use
      * @return the integer value, or {@code defaultValue} if the variable doesn't exist or is not an integer
      */
     int getInt(String name, int defaultValue);
@@ -105,6 +106,7 @@ public interface Variables
      * Returns the long value of the specified variable.
      *
      * @param name the variable name
+     * @param defaultValue the default value to use
      * @return the long value, or {@code defaultValue} if the variable doesn't exist or is not a long
      */
     long getLong(String name, long defaultValue);
@@ -159,6 +161,7 @@ public interface Variables
      * Whether a variable is currently blocked against being refreshed.
      *
      * @param name the variable name
+     * @return {@code true}: the variable name is blocked
      */
     boolean isBlockedVariableName(String name);
 

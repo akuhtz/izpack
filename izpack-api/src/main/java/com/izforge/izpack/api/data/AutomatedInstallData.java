@@ -30,8 +30,8 @@ import java.util.*;
 /**
  * Encloses information about the install process. This implementation is not thread safe.
  *
- * @author Julien Ponge <julien@izforge.com>
- * @author Johannes Lehtinen <johannes.lehtinen@iki.fi>
+ * @author Julien Ponge &lt;julien@izforge.com&gt;
+ * @author Johannes Lehtinen &lt;johannes.lehtinen@iki.fi&gt;
  */
 public class AutomatedInstallData implements InstallData
 {
@@ -364,7 +364,7 @@ public class AutomatedInstallData implements InstallData
 
     /**
      * Sets the locale.
-     * <p/>
+     * <p>
      * NOTE: for backwards compatibility, this sets the {@link ScriptParserConstant#ISO3_LANG ISO3} variable to be the
      * the <em>lowercase</em> version of the supplied ISO code.
      *

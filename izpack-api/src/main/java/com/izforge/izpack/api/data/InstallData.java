@@ -59,7 +59,7 @@ public interface InstallData
 
     /**
      * Sets a variable to the specified value.
-     * <p/>
+     * <p>
      * This is short hand for {@code getVariables().set(name, value)}.
      *
      * @param name  the name of the variable
@@ -70,7 +70,7 @@ public interface InstallData
 
     /**
      * Returns the current value of the specified variable.
-     * <p/>
+     * <p>
      * This is short hand for {@code getVariables().get(name)}.
      *
      * @param name the name of the variable
@@ -81,7 +81,7 @@ public interface InstallData
 
     /**
      * Refreshes dynamic variables.
-     * <p/>
+     * <p>
      * This is short hand for {@code getVariables().refresh()}.
      */
     void refreshVariables();
@@ -232,7 +232,7 @@ public interface InstallData
 
     /**
      * Determines if the installation was successful.
-     * <p/>
+     * <p>
      * NOTE: the result of this method is undefined until the panels have completed or failed.
      *
      * @return {@code true} if the installation was successful
@@ -269,7 +269,7 @@ public interface InstallData
 
     /**
      * Returns the installer requirements.
-     * <p/>
+     * <p>
      * These are evaluated prior to installation, to ensure all prerequisites are met.
      *
      * @return the installer requirements
@@ -278,7 +278,7 @@ public interface InstallData
 
     /**
      * Returns the dynamic installer requirement validators.
-     * <p/>
+     * <p>
      * These are evaluated on each panel change.
      *
      * @return the dynamic installer requirement validators
@@ -287,7 +287,7 @@ public interface InstallData
 
     /**
      * Sets a named attribute.
-     * <p/>
+     * <p>
      * The panels and other IzPack components can attach custom attributes to InstallData to communicate with each
      * other. For example, a set of co-operating custom panels do not need to implement a common data storage but can
      * use InstallData singleton. The name of the attribute should include the package and class name to prevent name

@@ -35,7 +35,7 @@ public interface Messages
 
     /**
      * Formats the message with the specified identifier, replacing placeholders with the supplied arguments.
-     * <p/>
+     * <p>
      * This uses {@link MessageFormat} to format the message.
      *
      * @param id   the message identifier
@@ -46,7 +46,7 @@ public interface Messages
 
     /**
      * Adds messages.
-     * <p/>
+     * <p>
      * This merges the supplied messages with the current messages. If an existing message exists with the same
      * identifier as that supplied, it will be replaced.
      *

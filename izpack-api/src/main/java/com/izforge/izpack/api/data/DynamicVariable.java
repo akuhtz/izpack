@@ -29,7 +29,7 @@ import java.util.List;
 import com.izforge.izpack.api.substitutor.VariableSubstitutor;
 
 /**
- * @author Dennis Reil, <Dennis.Reil@reddot.de>
+ * @author Dennis Reil, &lt;Dennis.Reil@reddot.de&gt;
  * @version $Id: $
  */
 public interface DynamicVariable extends Serializable

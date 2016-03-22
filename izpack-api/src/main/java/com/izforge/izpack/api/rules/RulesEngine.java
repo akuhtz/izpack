@@ -92,6 +92,7 @@ public interface RulesEngine
     /**
      * Check whether references condition exist This must be done after all conditions have been
      * read, to not depend on order of their definition in the XML
+     * @throws Exception on a parse error
      */
     void resolveConditions() throws Exception;
 

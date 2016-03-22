@@ -86,7 +86,8 @@ public interface DataValidator
     /**
      * Method to validate complex variable settings read from {@link InstallData} after a panel change.
      *
-     * @param installData@return {@link Status} the result of the validation
+     * @param installData the installData
+     * @return {@link Status} the result of the validation
      */
     public Status validateData(final InstallData installData);
 

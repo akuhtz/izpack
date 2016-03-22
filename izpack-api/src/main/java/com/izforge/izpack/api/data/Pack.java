@@ -428,7 +428,7 @@ public class Pack implements Serializable
 
     /**
      * Returns the installation groups that this pack belongs to.
-     * <p/>
+     * <p>
      * An installation group is a logical collection of packs. It enables different pack collections to be selected
      * e.g. minimal, default, or all.
      *
@@ -540,6 +540,8 @@ public class Pack implements Serializable
 
     /**
      * Add a child to this pack.
+     * 
+     * @param child the child to add
      */
     public void addChild(String child)
     {

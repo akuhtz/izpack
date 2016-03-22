@@ -37,6 +37,7 @@ public interface Container
     /**
      * Register a component type.
      *
+     * @param <T> the type of the component
      * @param componentType the component type
      * @throws ContainerException if registration fails
      */
@@ -53,9 +54,10 @@ public interface Container
 
     /**
      * Retrieve a component by its component type.
-     * <p/>
+     * <p>
      * If the component type is registered but an instance does not exist, then it will be created.
      *
+     * @param <T> the type of the component
      * @param componentType the type of the component
      * @return the corresponding object instance, or <tt>null</tt> if it does not exist
      * @throws ContainerException if component creation fails
@@ -64,7 +66,7 @@ public interface Container
 
     /**
      * Retrieve a component by its component key or type.
-     * <p/>
+     * <p>
      * If the component type is registered but an instance does not exist, then it will be created.
      *
      * @param componentKeyOrType the key or type of the component
@@ -75,7 +77,7 @@ public interface Container
 
     /**
      * Creates a child container.
-     * <p/>
+     * <p>
      * A child container:
      * <ul>
      * <li>may have different objects keyed on the same identifiers as its parent.</li>
@@ -104,6 +106,7 @@ public interface Container
     /**
      * Returns a class given its name.
      *
+     * @param <T> the type of the component
      * @param className the class name
      * @param superType the super type
      * @return the corresponding class

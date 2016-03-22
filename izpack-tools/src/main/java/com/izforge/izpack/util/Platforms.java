@@ -185,7 +185,7 @@ public class Platforms
 
     /**
      * Returns the current platform.
-     * <p/>
+     * <p>
      * This may query the underlying OS to determine the platform name.
      *
      * @return the current platform
@@ -200,7 +200,7 @@ public class Platforms
 
     /**
      * Returns the platform for the specified operating system name and architecture.
-     * <p/>
+     * <p>
      * This may query the underlying OS to determine the platform name.
      *
      * @param name the operating system name
@@ -214,7 +214,7 @@ public class Platforms
 
     /**
      * Returns the current platform given the operating system name, architecture and version.
-     * <p/>
+     * <p>
      * This may query the underlying OS to determine the platform name.
      *
      * @param name    the operating system name
@@ -229,7 +229,7 @@ public class Platforms
 
     /**
      * Returns the current platform given the operating system name, architecture and version.
-     * <p/>
+     * <p>
      * This may query the underlying OS to determine the platform name.
      *
      * @param name        the operating system name
@@ -414,7 +414,8 @@ public class Platforms
     /**
      * Returns the platform family name for the current operating system.
      * This may query the underlying OS to determine the platform name.
-     *
+     * 
+     * @param name the operating system name, or symbolic name
      * @return the corresponding platform family name
      */
     protected Name getCurrentOSName(String name)
