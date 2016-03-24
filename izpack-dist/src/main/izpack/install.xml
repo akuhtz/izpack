@@ -115,7 +115,7 @@
         <!-- The core files -->
         <pack name="Core" required="yes">
             <description>The IzPack core files.</description>
-            <fileset dir="" targetdir="$INSTALL_PATH">
+            <fileset dir="" override="true">
                 <include name="README.md"/>
                 <include name="LICENSE"/>
                 <include name="KEYS"/>
@@ -152,7 +152,7 @@
         <!-- Utilities pack -->
         <pack name="Utilities" required="no">
             <description>IzPack utilities (izpack2exe, izpack2app, izpack2jnlp)</description>
-            <fileset dir="" targetdir="$INSTALL_PATH">
+            <fileset dir="" override="true">
                 <include name="utils/**/*"/>
             </fileset>
             <executable
