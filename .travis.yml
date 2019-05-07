@@ -17,15 +17,22 @@ before_install:
 install:
   if [[ $TRAVIS_JDK_1_6 = *zulu@1.6* ]]; then 
   - $JABBA_HOME/bin/jabba install $TRAVIS_JDK_1_6 && export JAVA_HOME="$JABBA_HOME/jdk/$TRAVIS_JDK_1_6" ##&& export PATH="$JAVA_HOME/bin:$PATH" && java -Xmx32m -version
+  - wget https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip -P ./target
+  - unzip -qq ./target/apache-maven-3.2.5-bin.zip -d ./target
+  - export M2_HOME=$PWD/target/apache-maven-3.2.5
+  - wget http://central.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.61/bcprov-jdk15on-1.61.jar -P $JAVA_HOME/jre/lib/ext
+  - wget http://central.maven.org/maven2/org/bouncycastle/bctls-jdk15on/1.61/bctls-jdk15on-1.61.jar -P $JAVA_HOME/jre/lib/ext
+  - java -Xmx32m -version
   - sed -i 's/^security.provider.1=sun.security.provider.Sun/security.provider.1=org.bouncycastle.jce.provider.BouncyCastleProvider/g' $JAVA_HOME/jre/lib/security/java.security
   - sed -i 's/^security.provider.2=sun.security.rsa.SunRsaSign/security.provider.2=org.bouncycastle.jsse.provider.BouncyCastleJsseProvider/g' $JAVA_HOME/jre/lib/security/java.security
   - sed -i 's/^security.provider.3=com.sun.net.ssl.internal.ssl.Provider/security.provider.3=sun.security.provider.Sun/g' $JAVA_HOME/jre/lib/security/java.security
   - sed -i 's/^security.provider.4=com.sun.crypto.provider.SunJCE/security.provider.4=com.sun.net.ssl.internal.ssl.Provider/g' $JAVA_HOME/jre/lib/security/java.security
   - sed -i 's/^security.provider.5=sun.security.jgss.SunProvider/security.provider.5=com.sun.crypto.provider.SunJCE/g' $JAVA_HOME/jre/lib/security/java.security
   - cat $JAVA_HOME/jre/lib/security/java.security
-  fi
+  else
   - bash .travis.install-maven.sh "${MVN_VERSION}" "${HOME}/mvn-home"
   - export M2_HOME=${HOME}/mvn-home
+  fi
   - export PATH="$M2_HOME/bin:$JAVA_HOME/bin:$PATH"
   #- export PATH=${HOME}/mvn-home/bin:${PATH}
   - mvn -version
